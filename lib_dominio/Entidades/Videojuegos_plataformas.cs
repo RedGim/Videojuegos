@@ -1,0 +1,14 @@
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace lib_dominio.Entidades
+{
+    internal class Videojuegos_plataformas
+    {
+        public int Id { get; set; }
+        public int VideoJuego { get; set; }
+        public int Plataforma { get; set; }
+
+        [ForeignKey("Videojuego")] public Videojuegos? _Videojuego { get; set; }
+        [ForeignKey("Plataforma")] public Plataformas? _Plataforma { get; set; }
+    }
+}

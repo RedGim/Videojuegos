@@ -1,0 +1,6 @@
+C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.AssemblyReference.cache
+C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInputs.cache
+C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
+C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
+C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
