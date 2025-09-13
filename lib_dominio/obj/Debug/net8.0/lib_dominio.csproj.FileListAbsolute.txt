@@ -4,3 +4,9 @@ C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.Assembly
 C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
 C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
 C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.AssemblyReference.cache
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInputs.cache
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json

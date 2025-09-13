@@ -12,7 +12,7 @@ namespace lib_dominio.Entidades
 		public int clasificacion { get; set; }
         public int Desarrollador { get; set; }
 
-        [ForeignKey("clasificacion")] public Clasificaciones? _clasificacion { get; set; }
+        [ForeignKey("clasificacion")] public Clasificaciones? _Clasificacion { get; set; }
         [ForeignKey("Desarrollador")] public Desarrolladores? _Desarrollador { get; set; }
 
     }
