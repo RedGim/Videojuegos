@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace lib_dominio.Entidades
 {
-    internal class videojuegos_categorias
+    public class videojuegos_categorias
     {
         public int Id { get; set; }
         public int Videojuego { get; set; }

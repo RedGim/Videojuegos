@@ -1,6 +1,8 @@
-﻿namespace lib_repositorios.Interfaces
+﻿using lib_dominio.Entidades;
+
+namespace lib_repositorios.Interfaces
 {
-    internal class ICategoriasAplicacion
+    internal interface ICategoriasAplicacion
     {
         void Configurar(string StringConexion);
         List<Categorias> Listar();

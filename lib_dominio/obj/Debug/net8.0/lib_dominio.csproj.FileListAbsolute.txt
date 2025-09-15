@@ -16,3 +16,10 @@ C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInpu
 C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
 C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
 C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
+C:\ProyectoVideojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
+C:\ProyectoVideojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
+C:\ProyectoVideojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll

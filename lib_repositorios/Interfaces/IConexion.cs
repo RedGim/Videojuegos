@@ -10,6 +10,11 @@ namespace lib_repositorios.Interfaces
 
         DbSet<Paises>? Paises { get; set; }
 
+        DbSet<Bibliotecas>? Bibliotecas { get; set; }
+        DbSet<Resenas>? Resenas { get; set; }
+        DbSet<CarritoCompras>? CarritoCompras { get; set; }
+        DbSet<CarritoDetalles>? CarritoDetalles { get; set; }
+        DbSet<Pagos>? Pagos { get; set; }
         EntityEntry<T> Entry<T>(T entity) where T : class;
         int SaveChanges();
     }
