@@ -57,7 +57,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.Lista = this.iConexion!.Pagos!.ToList();
+            this.Lista = this.iConexion!.Pagos!.Include(x => x._Usuario).ToList();
             return Lista.Count > 0;
         }
     }

@@ -10,5 +10,7 @@ namespace lib_repositorios.Interfaces
         CarritoCompras? Guardar(CarritoCompras? entidad);
         CarritoCompras? Modificar(CarritoCompras? entidad);
         CarritoCompras? Borrar(CarritoCompras? entidad);
+
+        List<CarritoCompras> ListarPorUsuario(CarritoCompras? entidad);
     }
 }

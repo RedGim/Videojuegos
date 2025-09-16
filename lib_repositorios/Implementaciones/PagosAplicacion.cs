@@ -56,6 +56,11 @@ namespace lib_repositorios.Implementaciones
             return this.iConexion!.Pagos!.ToList();
         }
 
+        public List<Pagos> ListarPorUsuario(Pagos? entidad)
+        {
+            return this.iConexion!.Pagos!.Where(x => x.Usuario==entidad!.Usuario).ToList();
+        }
+
         public Pagos? Modificar(Pagos? entidad)
         {
             if (entidad == null)

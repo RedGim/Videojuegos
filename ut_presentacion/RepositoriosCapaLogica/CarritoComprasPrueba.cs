@@ -25,12 +25,19 @@ namespace ut_presentacion.PruebaCapaLogica
             Assert.AreEqual(true, GuardarPrueba());
             Assert.AreEqual(true, ModificarPrueba());
             Assert.AreEqual(true, ListarPrueba());
+            Assert.AreEqual(true, ListarPorUsuarioPrueba());
             Assert.AreEqual(true, BorrarPrueba());
         }
 
         public bool ListarPrueba()
         {
             var lista = carritoAplicacion.Listar();
+            return lista.Count > 0;
+        }
+
+        public bool ListarPorUsuarioPrueba()
+        {
+            var lista = carritoAplicacion.ListarPorUsuario(this.carritos!);
             return lista.Count > 0;
         }
 

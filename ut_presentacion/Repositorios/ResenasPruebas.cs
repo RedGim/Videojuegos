@@ -30,7 +30,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.Resenas = this.iConexion!.Resenas!.ToList();
+            this.Resenas = this.iConexion!.Resenas!.Include(x => x._Usuario).Include(x => x._Videojuego).ToList();
             return true;
         }
 

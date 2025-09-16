@@ -30,7 +30,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.Bibliotecas!.ToList();
+            this.lista = this.iConexion!.Bibliotecas!.Include(x => x._Videojuego).Include(x => x._Usuario).ToList();
             return lista.Count > 0;
         }
 

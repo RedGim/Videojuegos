@@ -70,5 +70,10 @@ namespace lib_repositorios.Implementaciones
             this.iConexion.SaveChanges();
             return entidad;
         }
+
+        public List<CarritoCompras> ListarPorUsuario(CarritoCompras? entidad)
+        {
+            return this.iConexion!.CarritoCompras!.Where(x => x.Usuario == entidad!.Usuario).ToList();
+        }
     }
 }

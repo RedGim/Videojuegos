@@ -55,7 +55,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.CarritoDetalles!.ToList();
+            this.lista = this.iConexion!.CarritoDetalles!.Include(x => x.CarritoCompras).Include(x => x.Videojuegos).ToList();
             return lista.Count > 0;
         }
     }
