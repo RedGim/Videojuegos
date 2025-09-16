@@ -30,3 +30,16 @@ C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
 C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
 C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
 C:\Users\Vale\Desktop\proyecto\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll
+C:\ProyectoProgramacionSoftware\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
+C:\ProyectoProgramacionSoftware\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
+C:\ProyectoProgramacionSoftware\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.AssemblyReference.cache
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInputs.cache
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
+C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll
