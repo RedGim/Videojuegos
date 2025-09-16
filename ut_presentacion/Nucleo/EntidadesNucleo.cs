@@ -85,6 +85,51 @@ namespace ut_presentacion.Nucleo
             entidad.Descripcion = "Prueba";
             return entidad;
         }
+        public static Clasificaciones? Clasificaciones()
+        {
+            var entidad = new Clasificaciones();
+            entidad.Nombre = "Prueba";
+            entidad.Edad = 20;
+            return entidad;
+        }
+        public static Usuarios_roles? Usuarios_roles()
+        {
+            var entidad = new Usuarios_roles();
+            entidad.Usuario = 1;
+            entidad.Rol = 1;
+            return entidad;
+        }
+        public static Perfiles? Perfiles()
+        {
+            var entidad = new Perfiles();
+            entidad.Nickname = "Prueba";
+            entidad.Biografia = "Prueba";
+            entidad.Usuario = 1;
+            return entidad;
+        }
+        public static Videojuegos? Videojuegos()
+        {
+            var entidad = new Videojuegos();
+            entidad.Nombre = "Prueba";
+            entidad.Descripcion = "Prueba";
+            entidad.Valor = 10.111m;
+            entidad.FechaLanzamiento = DateTime.Now;
+            entidad.clasificacion = 1;
+            entidad.Desarrollador = 1;
+            return entidad;
+        }
+        public static Usuarios? Usuarios()
+        {
+            var entidad = new Usuarios();
+            entidad.Nombre = "Prueba";
+            entidad.Correo = "Prueba@prueba";
+            entidad.Contrasena = "1234";
+            entidad.Fecha_nacimiento = DateTime.Now;
+            entidad.Pais = 1;
+            return entidad;
+        }
+
+
 
         public static Clasificaciones? Clasificaciones()
         {

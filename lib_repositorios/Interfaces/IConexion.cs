@@ -20,6 +20,10 @@ namespace lib_repositorios.Interfaces
         DbSet<Clasificaciones>? Clasificaciones { get; set; }
         DbSet<Plataformas>? Plataformas { get; set; }
         DbSet<Desarrolladores>? Desarrolladores { get; set; }
+        public DbSet<Usuarios>? Usuarios { get; set; }
+        public DbSet<Perfiles>? Perfiles { get; set; }
+        public DbSet<Videojuegos>? Videojuegos { get; set; }
+        public DbSet<Usuarios_roles>? Usuarios_roles { get; set; }
         DbSet<Roles>? Roles { get; set; }
         EntityEntry<T> Entry<T>(T entity) where T : class;
         int SaveChanges();

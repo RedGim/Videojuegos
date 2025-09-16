@@ -25,6 +25,10 @@ namespace lib_repositorios.Implementaciones
         public DbSet<Clasificaciones>? Clasificaciones { get; set; }
         public DbSet<Plataformas>? Plataformas { get; set; }
         public DbSet<Desarrolladores>? Desarrolladores { get; set; }
+        public DbSet<Usuarios>? Usuarios { get; set; }
+        public DbSet<Perfiles>? Perfiles { get; set; }
+        public DbSet<Videojuegos>? Videojuegos { get; set; }
+        public DbSet<Usuarios_roles>? Usuarios_roles { get; set; }
         public DbSet<Roles>? Roles { get; set; }
     }
 }
