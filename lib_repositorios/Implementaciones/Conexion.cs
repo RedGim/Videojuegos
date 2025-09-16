@@ -15,5 +15,10 @@ namespace lib_repositorios.Implementaciones
         }
 
         public DbSet<Paises>? Paises { get; set; }
+        public DbSet<Categorias>? Categorias { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DbSet<Clasificaciones>? Clasificaciones { get; set; }
+        public DbSet<Plataformas>? Plataformas { get; set; }
+        public DbSet<Desarrolladores>? Desarrolladores { get; set; }
     }
+
 }
