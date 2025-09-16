@@ -10,3 +10,16 @@ C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_domin
 C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
 C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
 C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.AssemblyReference.cache
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfoInputs.cache
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.AssemblyInfo.cs
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.csproj.CoreCompileInputs.cache
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.sourcelink.json
+C:\ProyectoVideojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
+C:\ProyectoVideojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
+C:\ProyectoVideojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
+C:\ProyectoVideojuegos\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll

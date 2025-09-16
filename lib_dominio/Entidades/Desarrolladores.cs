@@ -2,7 +2,7 @@
 
 namespace lib_dominio.Entidades
 {
-    internal class Desarrolladores
+    public class Desarrolladores
     {
 
         public int Id { get; set; }

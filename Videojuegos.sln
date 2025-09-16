@@ -11,15 +11,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Nucleo", "3. Nucleo", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Pruebas unitarrias", "4. Pruebas unitarrias", "{4B3CE768-CBC4-4DB4-B71E-37DD1E1A493B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_dominio", "lib_dominio\lib_dominio.csproj", "{422762B0-6662-4B15-B316-F9A0E9E2C3A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_dominio", "lib_dominio\lib_dominio.csproj", "{422762B0-6662-4B15-B316-F9A0E9E2C3A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_repositorios", "lib_repositorios\lib_repositorios.csproj", "{3129DB4B-EE73-4BED-8336-EF708A8E5BEB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "lib_repositorios", "lib_repositorios\lib_repositorios.csproj", "{3129DB4B-EE73-4BED-8336-EF708A8E5BEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ut_presentacion", "ut_presentacion\ut_presentacion.csproj", "{0E4882FE-DD11-49EE-8CDE-C34131C4A2B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ut_presentacion", "ut_presentacion\ut_presentacion.csproj", "{0E4882FE-DD11-49EE-8CDE-C34131C4A2B1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{D4A61463-6415-4786-A64D-C6659FD26652}"
 	ProjectSection(SolutionItems) = preProject
 		config.json = config.json
+		config.txt = config.txt
 	EndProjectSection
 EndProject
 Global

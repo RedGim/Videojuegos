@@ -1,6 +1,8 @@
-﻿namespace lib_dominio.Entidades
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace lib_dominio.Entidades
 {
-    internal class Videojuegos
+    public class Videojuegos
     {
 		public int Id { get; set; }
 		public string? Nombre { get; set; }

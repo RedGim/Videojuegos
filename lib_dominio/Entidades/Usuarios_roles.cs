@@ -2,7 +2,7 @@
 
 namespace lib_dominio.Entidades
 {
-    internal class Usuarios_roles
+    public class Usuarios_roles
     {
         public int Id { get; set; }
         public int Usuario { get; set; }

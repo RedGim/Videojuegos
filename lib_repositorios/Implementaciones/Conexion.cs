@@ -15,5 +15,11 @@ namespace lib_repositorios.Implementaciones
         }
 
         public DbSet<Paises>? Paises { get; set; }
+
+        public DbSet<Bibliotecas>? Bibliotecas { get; set; }
+        public DbSet<Resenas>? Resenas { get; set; }
+        public DbSet<CarritoCompras>? CarritoCompras { get; set; }
+        public DbSet<CarritoDetalles>? CarritoDetalles { get; set; }
+        public DbSet<Pagos>? Pagos { get; set; }    
     }
 }

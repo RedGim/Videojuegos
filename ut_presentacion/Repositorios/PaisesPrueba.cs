@@ -37,14 +37,14 @@ namespace ut_presentacion.Repositorios
         public bool Guardar()
         {
             this.entidad = EntidadesNucleo.Paises()!;
-            this.iConexion!.Paises!.Add(this.entidad);
+            this.iConexion!.Paises!.Add(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }
 
         public bool Modificar()
         {
-            this.entidad!.Pais = "Test";
+            this.entidad!.Nombre = "Test";
             var entry = this.iConexion!.Entry<Paises>(this.entidad);
             entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
