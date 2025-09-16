@@ -7,13 +7,13 @@ using ut_presentacion.Nucleo;
 namespace ut_presentacion.Repositorios
 {
     [TestClass]
-    public class Usuarios_rolesPruebas
+    public class Usuarios_rolesPrueba
     {
         private readonly IConexion? iConexion;
-        private List<Usuarios_roles>? Usuarios_roles;
-        private Usuarios_roles? Resena;
+        private List<Usuarios_roles>? lista;
+        private Usuarios_roles? entidad;
 
-        public Usuarios_rolesPruebas()
+        public Usuarios_rolesPrueba()
         {
             iConexion = new Conexion();
             iConexion.StringConexion = Configuracion.ObtenerValor("StringConexion");
@@ -30,32 +30,30 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.Usuarios_roles = this.iConexion!.Usuarios_roles!.Include(x => x._Usuario).Include(x => x._Videojuego).ToList();
-            return true;
+            this.lista = this.iConexion!.Usuarios_roles!.ToList();
+            return lista.Count > 0;
         }
-
 
         public bool Guardar()
         {
-            this.Resena = EntidadesNucleo.Usuarios_roles();
-            this.iConexion!.Usuarios_roles!.Add(this.Resena!);
-            this.iConexion.SaveChanges();
+            this.entidad = EntidadesNucleo.Usuarios_roles()!;
+            this.iConexion!.Usuarios_roles!.Add(this.entidad!);
+            this.iConexion!.SaveChanges();
             return true;
         }
 
         public bool Modificar()
         {
-            this.Resena!.VideoJuego = 5;
-            this.Resena!.Comentario = "Ya no me gusta este juego";
-            var entidad = this.iConexion!.Entry<Usuarios_roles>(this.Resena!);
-            entidad.State = EntityState.Modified;
+            this.entidad!.Rol = 0;
+            var entry = this.iConexion!.Entry<Usuarios_roles>(this.entidad);
+            entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
             return true;
         }
 
         public bool Borrar()
         {
-            this.iConexion!.Usuarios_roles!.Remove(this.Resena!);
+            this.iConexion!.Usuarios_roles!.Remove(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }
