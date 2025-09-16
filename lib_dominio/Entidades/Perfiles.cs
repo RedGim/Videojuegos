@@ -2,7 +2,7 @@
 
 namespace lib_dominio.Entidades
 {
-    internal class Perfiles
+    public class Perfiles
     {
         public int Id { get; set; }
         public string? Nickname { get; set; }

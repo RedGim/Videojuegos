@@ -2,7 +2,7 @@
 
 namespace lib_dominio.Entidades
 {
-    internal class Videojuegos_plataformas
+    public class Videojuegos_plataformas
     {
         public int Id { get; set; }
         public int VideoJuego { get; set; }
