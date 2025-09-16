@@ -20,6 +20,11 @@ namespace lib_repositorios.Implementaciones
         public DbSet<Resenas>? Resenas { get; set; }
         public DbSet<CarritoCompras>? CarritoCompras { get; set; }
         public DbSet<CarritoDetalles>? CarritoDetalles { get; set; }
-        public DbSet<Pagos>? Pagos { get; set; }    
+        public DbSet<Pagos>? Pagos { get; set; }
+        public DbSet<Categorias>? Categorias { get; set; }
+        public DbSet<Clasificaciones>? Clasificaciones { get; set; }
+        public DbSet<Plataformas>? Plataformas { get; set; }
+        public DbSet<Desarrolladores>? Desarrolladores { get; set; }
+        public DbSet<Roles>? Roles { get; set; }
     }
 }

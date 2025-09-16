@@ -62,5 +62,40 @@ namespace ut_presentacion.Nucleo
             pago.Fecha = DateTime.Now;
             return pago;
         }
+
+        public static Plataformas? Plataformas()
+        {
+            var entidad = new Plataformas();
+            entidad.Nombre = "Prueba";
+            return entidad;
+        }
+
+        public static Roles? Roles()
+        {
+            var entidad = new Roles();
+            entidad.Nombre = "Prueba";
+            entidad.Activo = false;
+            return entidad;
+        }
+
+        public static Categorias? Categorias()
+        {
+            var entidad = new Categorias();
+            entidad.Nombre = "Prueba";
+            entidad.Descripcion = "Prueba";
+            return entidad;
+        }
+
+        public static Clasificaciones? Clasificaciones()
+        {
+            var entidad = new Clasificaciones();
+            return entidad;
+        }
+
+        public static Desarrolladores? Desarrolladores()
+        {
+            var entidad = new Desarrolladores();
+            return entidad;
+        }
     }
 }

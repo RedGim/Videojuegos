@@ -10,8 +10,6 @@ namespace lib_dominio.Entidades
         public string? contraseña { get; set; }
         public DateTime Fecha_nacimiento { get; set; }
         public int Pais { get; set; }
-        public List<Perfiles>? Perfiles { get; set; }
-        public List<Usuarios_roles>? Usuarios_roles { get; set; }
 
         [ForeignKey("Pais")] public Paises? _Paises { get; set; }
     }

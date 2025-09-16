@@ -15,6 +15,12 @@ namespace lib_repositorios.Interfaces
         DbSet<CarritoCompras>? CarritoCompras { get; set; }
         DbSet<CarritoDetalles>? CarritoDetalles { get; set; }
         DbSet<Pagos>? Pagos { get; set; }
+        DbSet<Categorias>? Categorias { get; set; }
+
+        DbSet<Clasificaciones>? Clasificaciones { get; set; }
+        DbSet<Plataformas>? Plataformas { get; set; }
+        DbSet<Desarrolladores>? Desarrolladores { get; set; }
+        DbSet<Roles>? Roles { get; set; }
         EntityEntry<T> Entry<T>(T entity) where T : class;
         int SaveChanges();
     }

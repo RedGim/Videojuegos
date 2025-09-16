@@ -1,3 +1,0 @@
-{
-	'StringConexion':'server=localhost;database=db_videojuegos;Integrated Security=True;TrustServerCertificate=true;'
-}

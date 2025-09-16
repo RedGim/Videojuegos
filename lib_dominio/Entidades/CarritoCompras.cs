@@ -11,6 +11,5 @@ namespace lib_dominio.Entidades
 
 
         [ForeignKey("Usuario")] public Usuarios? _Usuario { get; set; }
-        public List<CarritoDetalles>? CarritoDetalles { get; set; }
     }
 }
