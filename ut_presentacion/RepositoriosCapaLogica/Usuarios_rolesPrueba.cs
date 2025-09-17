@@ -33,7 +33,7 @@ namespace ut_presentacion.PruebaCapaLogica
 
         public bool ListarRolPrueba()
         {
-            var lista = Usuarios_rolesAplicacion.ListarPorVideojuegos(this.Usuarios_roless);
+            var lista = Usuarios_rolesAplicacion.ListarPorRol(this.Usuarios_roless);
             return lista.Count > 0;
         }
 

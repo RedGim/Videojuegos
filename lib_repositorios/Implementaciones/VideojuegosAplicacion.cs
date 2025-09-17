@@ -59,5 +59,16 @@ namespace lib_repositorios.Implementaciones
             this.IConexion.SaveChanges();
             return entidad;
         }
+        public List<Videojuegos> ListarPorClasificacion(Videojuegos? entidad)
+        {
+            return this.IConexion!.Videojuegos!
+                        .Where(x => x.clasificacion == entidad!.clasificacion).ToList();
+        }
+
+        public List<Videojuegos> ListarPorDesarrollador(Videojuegos? entidad)
+        {
+            return this.IConexion!.Videojuegos!
+                        .Where(x => x.Desarrollador == entidad!.Desarrollador).ToList();
+        }
     }
 }
