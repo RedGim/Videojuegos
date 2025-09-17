@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace lib_repositorios.Implementaciones
 {
-    public class Usuarios_rolesAplicacion : IUsuarios_roles_rolesAplicacion
+    public class Usuarios_rolesAplicacion : IUsuarios_rolesAplicacion
     {
         private IConexion? IConexion = null;
         
@@ -58,6 +58,17 @@ namespace lib_repositorios.Implementaciones
             entry.State = EntityState.Modified;
             this.IConexion.SaveChanges();
             return entidad;
+        }
+        public List<Usuarios_roles> ListarPorRol(Usuarios_roles? entidad)
+        {
+            return this.IConexion!.Usuarios_roles!
+                        .Where(x => x.Rol == entidad!.Rol).ToList();
+        }
+
+        public List<Usuarios_roles> ListarPorUsuario(Usuarios_roles? entidad)
+        {
+            return this.IConexion!.Usuarios_roles!
+                        .Where(x => x.Usuario == entidad!.Usuario).ToList();
         }
     }
 }

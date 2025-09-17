@@ -59,5 +59,11 @@ namespace lib_repositorios.Implementaciones
             this.IConexion.SaveChanges();
             return entidad;
         }
+        public List<Usuarios> ListarPorPaises(Usuarios? entidad)
+        {
+            return this.IConexion!.Usuarios!
+                        .Where(x => x.Pais == entidad!.Pais).ToList();
+        }
+
     }
 }

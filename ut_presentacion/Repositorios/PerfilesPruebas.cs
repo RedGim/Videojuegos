@@ -30,7 +30,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.Perfiles!.ToList();
+            this.lista = this.iConexion!.Perfiles!.Include(x => x._Usuarios).ToList();
             return lista.Count > 0;
         }
 

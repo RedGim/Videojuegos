@@ -59,5 +59,11 @@ namespace lib_repositorios.Implementaciones
             this.IConexion.SaveChanges();
             return entidad;
         }
+        public List<Perfiles> ListarPorUsuarios(Perfiles? entidad)
+        {
+            return this.IConexion!.Perfiles!
+                        .Where(x => x.Usuario == entidad!.Usuario).ToList();
+        }
+
     }
 }

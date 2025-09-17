@@ -6,6 +6,7 @@ namespace lib_repositorios.Interfaces
     {
         void Configurar(string StringConexion);
         List<Perfiles> Listar();
+        List<Perfiles> ListarPorUsuarios(Perfiles? entidad);
         Perfiles? Guardar(Perfiles? entidad);
         Perfiles? Modificar(Perfiles? entidad);
         Perfiles? Borrar(Perfiles? entidad);
