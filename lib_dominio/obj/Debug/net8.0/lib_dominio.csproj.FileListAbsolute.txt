@@ -43,3 +43,10 @@ C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
 C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
 C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
 C:\ProyectoProgramacionSoftware\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.deps.json
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.dll
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\bin\Debug\net8.0\lib_dominio.pdb
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.dll
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\refint\lib_dominio.dll
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\lib_dominio.pdb
+C:\Users\Miguel Angel\Desktop\Videojuegos\lib_dominio\obj\Debug\net8.0\ref\lib_dominio.dll

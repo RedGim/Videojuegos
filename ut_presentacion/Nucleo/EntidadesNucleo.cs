@@ -112,7 +112,7 @@ namespace ut_presentacion.Nucleo
             var entidad = new Videojuegos();
             entidad.Nombre = "Prueba";
             entidad.Descripcion = "Prueba";
-            entidad.Valor = 10.111m;
+            entidad.Valor = 10.00m;
             entidad.FechaLanzamiento = DateTime.Now;
             entidad.clasificacion = 1;
             entidad.Desarrollador = 1;
@@ -126,14 +126,6 @@ namespace ut_presentacion.Nucleo
             entidad.Contrasena = "1234";
             entidad.Fecha_nacimiento = DateTime.Now;
             entidad.Pais = 1;
-            return entidad;
-        }
-
-
-
-        public static Clasificaciones? Clasificaciones()
-        {
-            var entidad = new Clasificaciones();
             return entidad;
         }
 
