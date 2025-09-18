@@ -36,6 +36,10 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
+            if (entidad.clasificacion == null)
+                throw new Exception("lbNoexisteClasificacion");
+            if (entidad.Desarrollador == null)
+                throw new Exception("lbNoexisteDesarrollador");
             // Operaciones
             this.IConexion!.Videojuegos!.Add(entidad);
             this.IConexion.SaveChanges();
@@ -53,6 +57,10 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad!.Id == 0)
                 throw new Exception("lbNoSeGuardo");
+            if (entidad.clasificacion == null)
+                throw new Exception("lbNoexisteClasificacion");
+            if (entidad.Desarrollador == null)
+                throw new Exception("lbNoexisteDesarrollador");
             // Operaciones
             var entry = this.IConexion!.Entry<Videojuegos>(entidad);
             entry.State = EntityState.Modified;

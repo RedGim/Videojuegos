@@ -83,6 +83,10 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbNoSeGuardo");
             if (entidad!.Contrasena == null || !ValidarContraseña(entidad.Contrasena))
                 throw new Exception("La contraseña debe tener al menos 8 caracteres, contener al menos una letra y un número.");
+            if (entidad!.Correo == null || !ValidarCorreo(entidad.Correo))
+                throw new Exception("El correo electrónico ya está registrado.");
+            if (entidad!.Fecha_nacimiento > DateTime.Now)
+                throw new Exception("La persona no ha nacdido");
             // Operaciones
             var entry = this.IConexion!.Entry<Usuarios>(entidad);
             entry.State = EntityState.Modified;
