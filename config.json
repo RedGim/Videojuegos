@@ -1,3 +1,3 @@
 {
-  "StringConexion": "server=DESKTOP-547OAPN\\SQLEXPRESS;database=db_videojuegos;Integrated Security=True;TrustServerCertificate=true;"
+    "StringConexion": "server=localhost\\SQLEXPRESS;database=db_videojuegos;Integrated Security=True;TrustServerCertificate=true;"
 }
