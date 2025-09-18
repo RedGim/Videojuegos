@@ -6,7 +6,7 @@ namespace lib_dominio.Entidades
     {
 
         public int Id { get; set; }
-        public string? Nombre_estudio { get; set; }
+        public string? NombreEstudio { get; set; }
         public int Pais { get; set; }
         public string? web { get; set; }
 

@@ -2,18 +2,23 @@
 using lib_repositorios.Implementaciones;
 using lib_repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using ut_presentacion.Nucleo;
 
 namespace ut_presentacion.Repositorios
 {
     [TestClass]
-    public class Usuarios_rolesPruebas
+    public class PlataformasPruebas
     {
         private readonly IConexion? iConexion;
-        private List<Usuarios_roles>? lista;
-        private Usuarios_roles? entidad;
+        private List<Plataformas>? lista;
+        private Plataformas? entidad;
 
-        public Usuarios_rolesPruebas()
+        public PlataformasPruebas()
         {
             iConexion = new Conexion();
             iConexion.StringConexion = Configuracion.ObtenerValor("StringConexion");
@@ -30,22 +35,22 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.Usuarios_roles!.Include(x => x._Roles).Include(x => x._Usuarios).ToList();
+            this.lista = this.iConexion!.Plataformas!.ToList();
             return lista.Count > 0;
         }
 
         public bool Guardar()
         {
-            this.entidad = EntidadesNucleo.Usuarios_roles()!;
-            this.iConexion!.Usuarios_roles!.Add(this.entidad!);
+            this.entidad = EntidadesNucleo.Plataformas()!;
+            this.iConexion!.Plataformas!.Add(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }
 
         public bool Modificar()
         {
-            this.entidad!.Rol = 0;
-            var entry = this.iConexion!.Entry<Usuarios_roles>(this.entidad);
+            this.entidad!.Nombre = "Test";
+            var entry = this.iConexion!.Entry<Plataformas>(this.entidad);
             entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
             return true;
@@ -53,7 +58,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Borrar()
         {
-            this.iConexion!.Usuarios_roles!.Remove(this.entidad!);
+            this.iConexion!.Plataformas!.Remove(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }

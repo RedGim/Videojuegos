@@ -15,7 +15,6 @@ namespace lib_repositorios.Implementaciones
         }
 
         public DbSet<Paises>? Paises { get; set; }
-
         public DbSet<Bibliotecas>? Bibliotecas { get; set; }
         public DbSet<Resenas>? Resenas { get; set; }
         public DbSet<CarritoCompras>? CarritoCompras { get; set; }
@@ -29,6 +28,8 @@ namespace lib_repositorios.Implementaciones
         public DbSet<Perfiles>? Perfiles { get; set; }
         public DbSet<Videojuegos>? Videojuegos { get; set; }
         public DbSet<Usuarios_roles>? Usuarios_roles { get; set; }
+        public DbSet<Videojuegos_plataformas>? Videojuegos_plataformas { get; set; }
+        public DbSet<Videojuegos_categorias>? Videojuegos_categorias { get; set; }
         public DbSet<Roles>? Roles { get; set; }
     }
 }

@@ -7,13 +7,14 @@ using ut_presentacion.Nucleo;
 namespace ut_presentacion.Repositorios
 {
     [TestClass]
-    public class Usuarios_rolesPruebas
+    public class DesarrolladoresPrueba
     {
-        private readonly IConexion? iConexion;
-        private List<Usuarios_roles>? lista;
-        private Usuarios_roles? entidad;
 
-        public Usuarios_rolesPruebas()
+        private readonly IConexion? iConexion;
+        private List<Desarrolladores>? lista;
+        private Desarrolladores? entidad;
+
+        public DesarrolladoresPrueba()
         {
             iConexion = new Conexion();
             iConexion.StringConexion = Configuracion.ObtenerValor("StringConexion");
@@ -30,22 +31,22 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.Usuarios_roles!.Include(x => x._Roles).Include(x => x._Usuarios).ToList();
+            this.lista = this.iConexion!.Desarrolladores!.ToList();
             return lista.Count > 0;
         }
 
         public bool Guardar()
         {
-            this.entidad = EntidadesNucleo.Usuarios_roles()!;
-            this.iConexion!.Usuarios_roles!.Add(this.entidad!);
+            this.entidad = EntidadesNucleo.Desarrolladores()!;
+            this.iConexion!.Desarrolladores!.Add(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }
 
         public bool Modificar()
         {
-            this.entidad!.Rol = 0;
-            var entry = this.iConexion!.Entry<Usuarios_roles>(this.entidad);
+            this.entidad!.NombreEstudio = "Test";
+            var entry = this.iConexion!.Entry<Desarrolladores>(this.entidad);
             entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
             return true;
@@ -53,7 +54,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Borrar()
         {
-            this.iConexion!.Usuarios_roles!.Remove(this.entidad!);
+            this.iConexion!.Desarrolladores!.Remove(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }

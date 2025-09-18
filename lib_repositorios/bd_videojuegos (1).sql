@@ -123,4 +123,172 @@ CREATE TABLE Pagos(
 	Fecha DATETIME NOT NULL DEFAULT GETDATE()
 );
 
---use master
+-- ==========================================
+-- 1. PAISES
+-- ==========================================
+INSERT INTO Paises (Nombre) VALUES
+('Estados Unidos'),
+('Japón'),
+('Canadá'),
+('España'),
+('Colombia');
+
+-- ==========================================
+-- 2. CATEGORIAS
+-- ==========================================
+INSERT INTO Categorias (Nombre, Descripcion) VALUES
+('Acción', 'Juegos con mucha adrenalina y combate'),
+('Aventura', 'Explora mundos abiertos y resuelve misiones'),
+('Deportes', 'Simulaciones de deportes reales o ficticios'),
+('Estrategia', 'Planeación táctica y toma de decisiones'),
+('RPG', 'Juegos de rol con progresión de personaje');
+
+-- ==========================================
+-- 3. PLATAFORMAS
+-- ==========================================
+INSERT INTO Plataformas (Nombre) VALUES
+('PC'),
+('PlayStation 5'),
+('Xbox Series X'),
+('Nintendo Switch'),
+('Steam Deck');
+
+-- ==========================================
+-- 4. ROLES
+-- ==========================================
+INSERT INTO Roles (Nombre, Activo) VALUES
+('Administrador', 1),
+('Moderador', 1),
+('Desarrollador', 1),
+('Jugador Premium', 1),
+('Jugador', 1);
+
+-- ==========================================
+-- 5. CLASIFICACIONES
+-- ==========================================
+INSERT INTO Clasificaciones (Nombre, Edad) VALUES
+('E', 6),
+('T', 13),
+('M', 17),
+('AO', 18),
+('RP', 0);
+
+-- ==========================================
+-- 6. DESARROLLADORES
+-- ==========================================
+INSERT INTO Desarrolladores (NombreEstudio, Pais, Web) VALUES
+('Nintendo', 2, 'https://www.nintendo.com'),
+('Rockstar Games', 1, 'https://www.rockstargames.com'),
+('CD Projekt Red', 3, 'https://www.cdprojekt.com'),
+('FromSoftware', 2, 'https://www.fromsoftware.jp'),
+('Ubisoft', 4, 'https://www.ubisoft.com');
+
+-- ==========================================
+-- 7. USUARIOS
+-- ==========================================
+INSERT INTO Usuarios (Nombre, Correo, Contrasena, Fecha_nacimiento, Pais) VALUES
+('Juan Perez', 'juanperez@mail.com', '12345', '1995-06-12', 5),
+('Maria Lopez', 'marialopez@mail.com', 'abcde', '2000-01-25', 4),
+('Carlos Gomez', 'carlosg@mail.com', 'pass123', '1988-10-05', 1),
+('Ana Torres', 'ana_t@mail.com', 'qwerty', '1999-03-15', 2),
+('Luis Rodriguez', 'luisr@mail.com', 'secure1', '1992-12-20', 3);
+
+-- ==========================================
+-- 8. PERFILES
+-- ==========================================
+INSERT INTO Perfiles (Nickname, Biografia, Usuario) VALUES
+('JuanPlay', 'Amante de los RPG y aventuras', 1),
+('MaryGamer', 'Fanática de juegos de plataformas', 2),
+('Carlitos88', 'Jugador competitivo de shooters', 3),
+('AnaT', 'Me encanta explorar mundos abiertos', 4),
+('LRod', 'Amante de los juegos de estrategia', 5);
+
+-- ==========================================
+-- 9. VIDEOJUEGOS
+-- ==========================================
+INSERT INTO Videojuegos (Nombre, Descripcion, Valor, FechaLanzamiento, clasificacion, Desarrollador) VALUES
+('The Legend of Zelda: TOTK', 'Explora Hyrule en una nueva aventura', 69.99, '2023-05-12', 2, 1),
+('Grand Theft Auto V', 'Acción y mundo abierto en Los Santos', 29.99, '2013-09-17', 3, 2),
+('The Witcher 3', 'Caza monstruos en un mundo abierto lleno de historia', 39.99, '2015-05-19', 3, 3),
+('Elden Ring', 'Explora las Tierras Intermedias y derrota a jefes épicos', 59.99, '2022-02-25', 3, 4),
+('Assassin''s Creed Valhalla', 'Conviértete en un vikingo en Inglaterra', 49.99, '2020-11-10', 3, 5);
+
+-- ==========================================
+-- 10. USUARIOS_ROLES
+-- ==========================================
+INSERT INTO Usuarios_roles (Usuario, Rol, Activo) VALUES
+(1, 5, 1),
+(2, 4, 1),
+(3, 2, 1),
+(4, 3, 1),
+(5, 1, 1);
+
+-- ==========================================
+-- 11. VIDEOJUEGOS_CATEGORIAS
+-- ==========================================
+INSERT INTO Videojuegos_categorias (VideoJuego, Categoria) VALUES
+(1, 2),
+(2, 1),
+(3, 5),
+(4, 5),
+(5, 2);
+
+-- ==========================================
+-- 12. VIDEOJUEGOS_PLATAFORMAS
+-- ==========================================
+INSERT INTO Videojuegos_plataformas (VideoJuego, Plataforma) VALUES
+(1, 4),
+(2, 2),
+(3, 1),
+(4, 1),
+(5, 3);
+
+-- ==========================================
+-- 13. BIBLIOTECAS
+-- ==========================================
+INSERT INTO Bibliotecas (Usuario, VideoJuego) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+
+-- ==========================================
+-- 14. RESENAS
+-- ==========================================
+INSERT INTO Resenas (Usuario, VideoJuego, Calificacion, Comentario) VALUES
+(1, 1, 4.5, 'Increíble juego de aventura'),
+(2, 2, 5.0, 'Clásico imperdible'),
+(3, 3, 4.0, 'Excelente historia'),
+(4, 4, 4.8, 'Desafiante y emocionante'),
+(5, 5, 4.3, 'Gran juego de mundo abierto');
+
+-- ==========================================
+-- 15. CARRITOCOMPRAS
+-- ==========================================
+INSERT INTO CarritoCompras (Usuario, Estado) VALUES
+(1, 1),
+(2, 0),
+(3, 1),
+(4, 0),
+(5, 1);
+
+-- ==========================================
+-- 16. CARRITODETALLES
+-- ==========================================
+INSERT INTO CarritoDetalles (Carrito, VideoJuego, Cantidad, Precio) VALUES
+(1, 2, 1, 29.99),
+(3, 4, 1, 59.99),
+(3, 5, 2, 49.99),
+(5, 3, 1, 39.99),
+(5, 1, 1, 69.99);
+
+-- ==========================================
+-- 17. PAGOS
+-- ==========================================
+INSERT INTO Pagos (Usuario, Monto, MetodoPago) VALUES
+(1, 29.99, 'Tarjeta de Crédito'),
+(2, 0.00, 'Saldo en cuenta'),
+(3, 149.97, 'PayPal'),
+(4, 0.00, 'Efectivo'),
+(5, 109.98, 'Tarjeta de Débito');

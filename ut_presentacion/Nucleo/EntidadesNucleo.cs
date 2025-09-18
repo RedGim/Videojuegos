@@ -132,6 +132,23 @@ namespace ut_presentacion.Nucleo
         public static Desarrolladores? Desarrolladores()
         {
             var entidad = new Desarrolladores();
+            entidad.NombreEstudio = "Prueba";
+            entidad.Pais = 1;
+            entidad.web = "Prueba";
+            return entidad;
+        }
+        public static Videojuegos_categorias? Videojuegos_categorias()
+        {
+            var entidad = new Videojuegos_categorias();
+            entidad.Videojuego = 1;
+            entidad.Categoria = 1;
+            return entidad;
+        }
+        public static Videojuegos_plataformas? Videojuegos_plataformas()
+        {
+            var entidad = new Videojuegos_plataformas();
+            entidad.Videojuego = 1;
+            entidad.Plataforma = 1;
             return entidad;
         }
     }

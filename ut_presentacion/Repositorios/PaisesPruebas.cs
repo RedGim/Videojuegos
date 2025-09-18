@@ -7,13 +7,13 @@ using ut_presentacion.Nucleo;
 namespace ut_presentacion.Repositorios
 {
     [TestClass]
-    public class Usuarios_rolesPruebas
+    public class PaisesPruebas
     {
         private readonly IConexion? iConexion;
-        private List<Usuarios_roles>? lista;
-        private Usuarios_roles? entidad;
+        private List<Paises>? lista;
+        private Paises? entidad;
 
-        public Usuarios_rolesPruebas()
+        public PaisesPruebas()
         {
             iConexion = new Conexion();
             iConexion.StringConexion = Configuracion.ObtenerValor("StringConexion");
@@ -30,22 +30,22 @@ namespace ut_presentacion.Repositorios
 
         public bool Listar()
         {
-            this.lista = this.iConexion!.Usuarios_roles!.Include(x => x._Roles).Include(x => x._Usuarios).ToList();
+            this.lista = this.iConexion!.Paises!.ToList();
             return lista.Count > 0;
         }
 
         public bool Guardar()
         {
-            this.entidad = EntidadesNucleo.Usuarios_roles()!;
-            this.iConexion!.Usuarios_roles!.Add(this.entidad!);
+            this.entidad = EntidadesNucleo.Paises()!;
+            this.iConexion!.Paises!.Add(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }
 
         public bool Modificar()
         {
-            this.entidad!.Rol = 0;
-            var entry = this.iConexion!.Entry<Usuarios_roles>(this.entidad);
+            this.entidad!.Nombre = "Test";
+            var entry = this.iConexion!.Entry<Paises>(this.entidad);
             entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
             return true;
@@ -53,7 +53,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Borrar()
         {
-            this.iConexion!.Usuarios_roles!.Remove(this.entidad!);
+            this.iConexion!.Paises!.Remove(this.entidad!);
             this.iConexion!.SaveChanges();
             return true;
         }
