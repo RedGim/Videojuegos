@@ -44,7 +44,7 @@ namespace ut_presentacion.Repositorios
 
         public bool Modificar()
         {
-            this.entidad!.Rol = 0;
+            this.entidad!.Rol = 1;
             var entry = this.iConexion!.Entry<Usuarios_roles>(this.entidad);
             entry.State = EntityState.Modified;
             this.iConexion!.SaveChanges();
