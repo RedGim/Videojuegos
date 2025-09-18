@@ -39,6 +39,11 @@ namespace lib_repositorios.Implementaciones
 
         public Resenas? Guardar(Resenas? entidad)
         {
+            entidad!.Fecha = DateTime.Now;
+            if (VerificarExistencia(entidad!)) 
+            {
+                throw new Exception("Reseña enviada");
+            }
             if (entidad == null)
             {
                 throw new Exception("Reseña no enviada");
@@ -47,10 +52,20 @@ namespace lib_repositorios.Implementaciones
             {
                 throw new Exception("El registro ya se guardó");
             }
+            if (entidad!.Calificacion < 1.0m || entidad!.Calificacion > 5.0m)
+            {
+                throw new Exception("Tu calificación no es válida, debe ser entre 1.0 y 5.0");
+            }
 
             this.iConexion!.Resenas!.Add(entidad);
             this.iConexion!.SaveChanges();
             return entidad;
+        }
+
+        public bool VerificarExistencia(Resenas Resenas)
+        {
+            var entidad = this.iConexion!.Resenas!.FirstOrDefault(x => x.Usuario == Resenas.Usuario && x.VideoJuego == Resenas.VideoJuego);
+            return entidad != null;
         }
 
         public List<Resenas> Listar()
@@ -67,6 +82,10 @@ namespace lib_repositorios.Implementaciones
             if (entidad!.Id == 0)
             {
                 throw new Exception("El registro ya se guardó");
+            }
+            if (entidad!.Calificacion < 1.0m || entidad!.Calificacion > 5.0m)
+            {
+                throw new Exception("Tu calificación no es válida, debe ser entre 1.0 y 5.0");
             }
 
             var entry = this.iConexion!.Entry<Resenas>(entidad);

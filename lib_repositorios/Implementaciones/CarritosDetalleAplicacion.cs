@@ -46,6 +46,18 @@ namespace lib_repositorios.Implementaciones
             {
                 throw new Exception("Ya se guardó");
             }
+            if (entidad.Cantidad < 1)
+            {
+                throw new Exception("Registro sin cantidad");
+            }
+            if (entidad.Precio < 0)
+            {
+                throw new Exception("Precio no válido");
+            }
+            if (VerificarVideojuego(entidad))
+            {
+                throw new Exception("El videojuego no existe");
+            }
 
             this.iConexion!.CarritoDetalles!.Add(entidad);
             this.iConexion!.SaveChanges();
@@ -67,11 +79,27 @@ namespace lib_repositorios.Implementaciones
             {
                 throw new Exception("Id no valido");
             }
+            if (entidad.Cantidad < 1)
+            {
+                throw new Exception("Registro sin cantidad");
+            }
+            if (entidad.Precio < 0)
+            {
+                throw new Exception("Precio no válido");
+            }
+
 
             var entry = this.iConexion!.Entry<CarritoDetalles>(entidad);
             entry.State = EntityState.Modified;
             this.iConexion.SaveChanges();
             return entidad;
+        }
+
+        public bool VerificarVideojuego(CarritoDetalles carrito)
+        {
+            var entidad = this.iConexion!.CarritoDetalles!.FirstOrDefault(x => x.VideoJuego == carrito.VideoJuego);
+
+            return entidad == null;
         }
     }
 }

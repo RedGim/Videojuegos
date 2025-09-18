@@ -19,16 +19,19 @@ namespace ut_presentacion.PruebaCapaLogica
             bibliotecasAplicacion.Configurar(Configuracion.ObtenerValor("StringConexion"));
         }
 
+
         [TestMethod]
         public void Ejecutar()
-        {
+        {  
             Assert.AreEqual(true, GuardarPrueba());
+            Assert.AreEqual(null, GuardarDuplicado());
             Assert.AreEqual(true, ListarVideojuegoPrueba());
             Assert.AreEqual(true, ListarUsuarioPrueba());
             Assert.AreEqual(true, ModificarPrueba());
             Assert.AreEqual(true, ListarPrueba());
-            Assert.AreEqual(true, BorrarPrueba());
             Assert.ThrowsException<Exception>(() => BorrarNuloPrueba());
+            Assert.AreEqual(true, BorrarPrueba());
+
         }
 
         public bool ListarVideojuegoPrueba()
@@ -36,6 +39,7 @@ namespace ut_presentacion.PruebaCapaLogica
             var lista = bibliotecasAplicacion.ListarPorVideojuegos(this.bibliotecas);
             return lista.Count > 0;
         }
+
 
         public bool ListarUsuarioPrueba()
         {
@@ -73,6 +77,12 @@ namespace ut_presentacion.PruebaCapaLogica
         public void BorrarNuloPrueba()
         {
             bibliotecasAplicacion!.Borrar(null);
+        }
+
+        public Bibliotecas GuardarDuplicado()
+        {
+            var entidad = this.bibliotecasAplicacion.Guardar(this.bibliotecas);
+            return entidad!;
         }
     }
 }

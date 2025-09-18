@@ -46,6 +46,11 @@ namespace lib_repositorios.Implementaciones
             {
                 throw new Exception("Pago ya se guardó");
             }
+            if (entidad.Monto < 0)
+            {
+                throw new Exception("Monto inválido");
+            }
+
             this.iConexion!.Pagos!.Add(entidad);
             this.iConexion!.SaveChanges();
             return entidad;
@@ -59,23 +64,6 @@ namespace lib_repositorios.Implementaciones
         public List<Pagos> ListarPorUsuario(Pagos? entidad)
         {
             return this.iConexion!.Pagos!.Where(x => x.Usuario==entidad!.Usuario).ToList();
-        }
-
-        public Pagos? Modificar(Pagos? entidad)
-        {
-            if (entidad == null)
-            {
-                throw new Exception("Registro no enviado");
-            }
-            if (entidad.Id == 0)
-            {
-                throw new Exception("Id no valido");
-            }
-
-            var entry = this.iConexion!.Entry<Pagos>(entidad);
-            entry.State = EntityState.Modified;
-            this.iConexion.SaveChanges();
-            return entidad;
         }
     }
 }

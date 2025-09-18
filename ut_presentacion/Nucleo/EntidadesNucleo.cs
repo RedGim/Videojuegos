@@ -16,7 +16,6 @@ namespace ut_presentacion.Nucleo
 
             biblioteca.Usuario = 1;
             biblioteca.VideoJuego = 2;
-            biblioteca.FechaAdquisicion = DateTime.Now;
 
             return biblioteca;
         }

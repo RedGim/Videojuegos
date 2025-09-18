@@ -8,7 +8,6 @@ namespace lib_repositorios.Interfaces
 
         List<Pagos> Listar();
         Pagos? Guardar(Pagos? entidad);
-        Pagos? Modificar(Pagos? entidad);
         Pagos? Borrar(Pagos? entidad);
         List<Pagos> ListarPorUsuario(Pagos? entidad);
     }

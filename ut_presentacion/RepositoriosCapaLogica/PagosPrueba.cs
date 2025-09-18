@@ -23,7 +23,7 @@ namespace ut_presentacion.PruebaCapaLogica
         public void Ejecutar()
         {
             Assert.AreEqual(true, GuardarPrueba());
-            Assert.AreEqual(true, ModificarPrueba());
+            Assert.ThrowsException<Exception>(() => GuardarMontoNoValido());
             Assert.AreEqual(true, ListarPrueba());
             Assert.AreEqual(true, ListarPorUsuarioPrueba());
             Assert.AreEqual(true, BorrarPrueba());
@@ -48,12 +48,14 @@ namespace ut_presentacion.PruebaCapaLogica
             return true;
         }
 
-        public bool ModificarPrueba()
+        public void GuardarMontoNoValido()
         {
-            this.pagos!.Monto = 30.50m;
-            this.pagos.MetodoPago = "Tarjeta de débito";
-            this.pagosAplicacion.Modificar(this.pagos);
-            return true;
+            var entidad = new Pagos();
+            entidad!.Usuario = 2;
+            entidad!.Monto = -1;
+            entidad!.MetodoPago = "Tarjeta de Crédito";
+            entidad!.Fecha = DateTime.Now;
+            this.pagosAplicacion.Guardar(entidad);
         }
 
         public bool BorrarPrueba()
