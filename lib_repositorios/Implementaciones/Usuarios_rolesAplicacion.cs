@@ -36,6 +36,11 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
+            if (entidad!.Rol == null)
+                throw new Exception("lbNoExisteElRol");
+            if (entidad!.Usuario == null)
+                throw new Exception("lbNoExisteElUsuario");
+
             // Operaciones
             this.IConexion!.Usuarios_roles!.Add(entidad);
             this.IConexion.SaveChanges();
@@ -53,6 +58,10 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad!.Id == 0)
                 throw new Exception("lbNoSeGuardo");
+            if (entidad!.Rol == null)
+                throw new Exception("lbNoExisteElRol");
+            if (entidad!.Usuario == null)
+                throw new Exception("lbNoExisteElUsuario");
             // Operaciones
             var entry = this.IConexion!.Entry<Usuarios_roles>(entidad);
             entry.State = EntityState.Modified;

@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "oozq8/vtslQ=",
+  "dgSpecHash": "tcq/G5EMbsM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\salak401\\Desktop\\Videojuegos\\lib_dominio\\lib_dominio.csproj",
+  "projectFilePath": "C:\\Users\\zamue\\Source\\Repos\\Videojuegos\\lib_dominio\\lib_dominio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\salak401\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\zamue\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
