@@ -16,7 +16,7 @@ namespace ut_presentacion.Nucleo
 
             biblioteca.Usuario = 1;
             biblioteca.VideoJuego = 2;
-
+            biblioteca.FechaAdquisicion = DateTime.Now;
             return biblioteca;
         }
 
@@ -121,7 +121,7 @@ namespace ut_presentacion.Nucleo
         {
             var entidad = new Usuarios();
             entidad.Nombre = "Prueba";
-            entidad.Correo = "Prueba@prueba";
+            entidad.Correo = "NuevoCorreoPrueba3@pruebapruebita.com";
             entidad.Contrasena = "1234prueba";
             entidad.Fecha_nacimiento = DateTime.Now;
             entidad.Pais = 1;

@@ -53,6 +53,7 @@ namespace ut_presentacion.PruebaCapaLogica
         public bool ModificarPrueba()
         {
             this.Usuarioss!.Pais = 3;
+            this.Usuarioss!.Correo = "CambioCorreoPrueba@pruebapruebita.com";
             this.UsuariossAplicacion.Modificar(Usuarioss);
             return true;
         }
