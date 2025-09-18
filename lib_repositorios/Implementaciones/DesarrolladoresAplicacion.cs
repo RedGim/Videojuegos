@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace lib_repositorios.Implementaciones
 {
-    internal class DesarrolladoresAplicacion : IDesarrolladoresAplicacion
+    public class DesarrolladoresAplicacion : IDesarrolladoresAplicacion
     {
         private IConexion? IConexion = null;
 
@@ -59,6 +59,10 @@ namespace lib_repositorios.Implementaciones
             this.IConexion.SaveChanges();
             return entidad;
         }
-
+        public List<Desarrolladores> ListarPorPais(Desarrolladores? entidad)
+        {
+            return this.IConexion!.Desarrolladores!
+                        .Where(x => x.Pais == entidad!.Pais).ToList();
+        }
     }
 }

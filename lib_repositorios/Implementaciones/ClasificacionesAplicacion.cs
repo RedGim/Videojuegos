@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace lib_repositorios.Implementaciones
 {
-    internal class ClasificacionesAplicacion: IClasificacionesAplicacion
+    public class ClasificacionesAplicacion: IClasificacionesAplicacion
     {
             private IConexion? IConexion = null;
 

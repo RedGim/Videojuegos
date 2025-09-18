@@ -15,10 +15,21 @@ namespace lib_repositorios.Implementaciones
         }
 
         public DbSet<Paises>? Paises { get; set; }
-        public DbSet<Categorias>? Categorias { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DbSet<Bibliotecas>? Bibliotecas { get; set; }
+        public DbSet<Resenas>? Resenas { get; set; }
+        public DbSet<CarritoCompras>? CarritoCompras { get; set; }
+        public DbSet<CarritoDetalles>? CarritoDetalles { get; set; }
+        public DbSet<Pagos>? Pagos { get; set; }
+        public DbSet<Categorias>? Categorias { get; set; }
         public DbSet<Clasificaciones>? Clasificaciones { get; set; }
         public DbSet<Plataformas>? Plataformas { get; set; }
         public DbSet<Desarrolladores>? Desarrolladores { get; set; }
+        public DbSet<Usuarios>? Usuarios { get; set; }
+        public DbSet<Perfiles>? Perfiles { get; set; }
+        public DbSet<Videojuegos>? Videojuegos { get; set; }
+        public DbSet<Usuarios_roles>? Usuarios_roles { get; set; }
+        public DbSet<Videojuegos_plataformas>? Videojuegos_plataformas { get; set; }
+        public DbSet<Videojuegos_categorias>? Videojuegos_categorias { get; set; }
+        public DbSet<Roles>? Roles { get; set; }
     }
-
 }

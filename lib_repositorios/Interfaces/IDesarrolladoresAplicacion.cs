@@ -2,10 +2,11 @@
 
 namespace lib_repositorios.Interfaces
 {
-    internal interface IDesarrolladoresAplicacion
+    public interface IDesarrolladoresAplicacion
     {
         void Configurar(string StringConexion);
         List<Desarrolladores> Listar();
+        List<Desarrolladores> ListarPorPais(Desarrolladores? entidad);
         Desarrolladores? Guardar(Desarrolladores? entidad);
         Desarrolladores? Modificar(Desarrolladores? entidad);
         Desarrolladores? Borrar(Desarrolladores? entidad);

@@ -2,7 +2,7 @@
 
 namespace lib_repositorios.Interfaces
 {
-    internal interface IClasificacionesAplicacion
+    public interface IClasificacionesAplicacion
     {
         void Configurar(string StringConexion);
         List<Clasificaciones> Listar();
