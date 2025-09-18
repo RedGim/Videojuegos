@@ -6,7 +6,7 @@
         public string? Nombre { get; set; }
         public string? Descripcion { get; set; }
 
-        public List<Videojuegos_categorias>? Videojuegos_categorias;
+        public List<Videojuegos_categorias>? Videojuegos_categorias { get; set; }
     }
 }
 

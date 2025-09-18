@@ -9,7 +9,6 @@ namespace lib_repositorios.Interfaces
         string? StringConexion { get; set; }
 
         DbSet<Paises>? Paises { get; set; }
-
         DbSet<Bibliotecas>? Bibliotecas { get; set; }
         DbSet<Resenas>? Resenas { get; set; }
         DbSet<CarritoCompras>? CarritoCompras { get; set; }

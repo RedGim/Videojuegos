@@ -5,7 +5,7 @@
         public int Id { get; set; }
         public string? Nombre { get; set; }
 
-        public List<Usuarios>? Usuarios;
-        public List<Desarrolladores>? Desarrolladores;
+        public List<Usuarios>? Usuarios { get; set; }
+        public List<Desarrolladores>? Desarrolladores { get; set; }
     }
 }

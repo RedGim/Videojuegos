@@ -9,8 +9,7 @@ namespace lib_dominio.Entidades
         public DateTime FechaModificacIon {  get; set; }
         public bool Estado { get; set; }
 
-
-        public List<CarritoDetalles>? CarritoDetalles;
+        public List<CarritoDetalles>? CarritoDetalles { get; set; }
         [ForeignKey("Usuario")] public Usuarios? _Usuario { get; set; }
     }
 }

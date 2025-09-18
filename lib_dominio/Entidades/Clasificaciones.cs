@@ -8,6 +8,6 @@ namespace lib_dominio.Entidades
         public string? Nombre { get; set; }
         public int Edad { get; set; }
 
-        public List<Videojuegos>? Videojuegos;
+        public List<Videojuegos>? Videojuegos { get; set; }
     }
 }

@@ -10,7 +10,7 @@ namespace lib_dominio.Entidades
         public int Pais { get; set; }
         public string? web { get; set; }
 
-        public List<Videojuegos>? Videojuegos;
+        public List<Videojuegos>? Videojuegos { get; set; }
         [ForeignKey("Pais")] public Paises? _Pais { get; set; }
     }
 }

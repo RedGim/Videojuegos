@@ -12,11 +12,12 @@ namespace lib_dominio.Entidades
 		public int clasificacion { get; set; }
         public int Desarrollador { get; set; }
 
-        public List<Bibliotecas>? Bibliotecas;
-        public List<CarritoDetalles>? CarritoDetalles;
-        public List<Resenas>? Resenas;
-        public List<Videojuegos_plataformas>? Videojuegos_plataformas;
-        public List<Videojuegos_categorias>? Videojuegos_categorias;
+        public List<Bibliotecas>? Bibliotecas { get; set; }
+        public List<CarritoDetalles>? CarritoDetalles { get; set; }
+        public List<Resenas>? Resenas { get; set; }
+        public List<Videojuegos_plataformas>? Videojuegos_plataformas { get; set; }
+        public List<Videojuegos_categorias>? Videojuegos_categorias { get; set; }
+
         [ForeignKey("clasificacion")] public Clasificaciones? _Clasificacion { get; set; }
         [ForeignKey("Desarrollador")] public Desarrolladores? _Desarrollador { get; set; }
 
