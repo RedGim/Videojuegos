@@ -123,7 +123,7 @@ namespace ut_presentacion.Nucleo
             var entidad = new Usuarios();
             entidad.Nombre = "Prueba";
             entidad.Correo = "Prueba@prueba";
-            entidad.Contrasena = "1234";
+            entidad.Contrasena = "1234prueba";
             entidad.Fecha_nacimiento = DateTime.Now;
             entidad.Pais = 1;
             return entidad;

@@ -1,3 +1,3 @@
 {
-  "StringConexion": "server=SALAK401-22;database=db_videojuegos;Integrated Security=True;TrustServerCertificate=true;"
+  "StringConexion": "server=localhost;database=db_videojuegos;Integrated Security=True;TrustServerCertificate=true;"
 }

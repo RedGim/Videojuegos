@@ -56,12 +56,14 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
-            if (entidad!._Paises == null)
+            if (entidad!.Pais == null)
                 throw new Exception("lbFaltapais");
             if (entidad!.Contrasena == null || !ValidarContraseña(entidad.Contrasena))
                 throw new Exception("La contraseña debe tener al menos 8 caracteres, contener al menos una letra y un número.");
             if (entidad!.Correo == null || !ValidarCorreo(entidad.Correo))
                 throw new Exception("El correo electrónico ya está registrado.");
+            if (entidad!.Fecha_nacimiento > DateTime.Now)
+                throw new Exception("La persona no ha nacdido");
             // Operaciones
             this.IConexion!.Usuarios!.Add(entidad);
             this.IConexion.SaveChanges();
