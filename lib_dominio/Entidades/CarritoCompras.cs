@@ -10,6 +10,7 @@ namespace lib_dominio.Entidades
         public bool Estado { get; set; }
 
 
+        public List<CarritoDetalles>? CarritoDetalles;
         [ForeignKey("Usuario")] public Usuarios? _Usuario { get; set; }
     }
 }
