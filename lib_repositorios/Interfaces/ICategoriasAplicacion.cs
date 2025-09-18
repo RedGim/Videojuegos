@@ -2,7 +2,7 @@
 
 namespace lib_repositorios.Interfaces
 {
-    internal interface ICategoriasAplicacion
+    public interface ICategoriasAplicacion
     {
         void Configurar(string StringConexion);
         List<Categorias> Listar();

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace lib_repositorios.Implementaciones
 {
-    internal class Videojuegos_categoriasAplicacion: IVideojuegos_categoriasAplicacion
+    public class Videojuegos_categoriasAplicacion: IVideojuegos_categoriasAplicacion
     {
         private IConexion? IConexion = null;
 

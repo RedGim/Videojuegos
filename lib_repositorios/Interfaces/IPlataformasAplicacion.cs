@@ -2,7 +2,7 @@
 
 namespace lib_repositorios.Interfaces
 {
-    internal interface IPlataformasAplicacion
+    public interface IPlataformasAplicacion
     {
         void Configurar(string StringConexion);
         List<Plataformas> Listar();
