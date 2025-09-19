@@ -36,7 +36,7 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
-            if (entidad!.Usuario == null)
+            if (entidad!.Usuario == 0)
                 throw new Exception("lbNecesitaunusuario");
             // Operaciones
             this.IConexion!.Perfiles!.Add(entidad);
@@ -55,7 +55,7 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad!.Id == 0)
                 throw new Exception("lbNoSeGuardo");
-             if (entidad!.Usuario == null)
+             if (entidad!.Usuario == 0)
                 throw new Exception("lbNecesitaunusuario");
             // Operaciones
             var entry = this.IConexion!.Entry<Perfiles>(entidad);

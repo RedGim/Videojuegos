@@ -56,7 +56,7 @@ namespace lib_repositorios.Implementaciones
                 throw new Exception("lbFaltaInformacion");
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
-            if (entidad!.Pais == null)
+            if (entidad!.Pais == 0)
                 throw new Exception("lbFaltapais");
             if (entidad!.Contrasena == null || !ValidarContraseña(entidad.Contrasena))
                 throw new Exception("La contraseña debe tener al menos 8 caracteres, contener al menos una letra y un número.");

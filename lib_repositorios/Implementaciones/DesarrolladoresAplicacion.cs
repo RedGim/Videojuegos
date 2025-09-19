@@ -17,6 +17,25 @@ namespace lib_repositorios.Implementaciones
         {
             this.IConexion!.StringConexion = StringConexion;
         }
+        public static bool Validar(Desarrolladores Desarrolladores)
+        {
+            if (string.IsNullOrWhiteSpace(Desarrolladores.NombreEstudio))
+            {
+                throw new Exception("El nombre de la categoria es obligatorio.");
+            }
+
+            if (Desarrolladores.NombreEstudio.Length > 50)
+            {
+                throw new Exception("El nombre de estudio de la categoria no puede superar los 50 caracteres.");
+            }
+
+            if (Desarrolladores.Pais == 0)
+            {
+                throw new Exception("El Pais no puede ser nullo.");
+            }
+
+            return true;
+        }
 
         public Desarrolladores? Borrar(Desarrolladores? entidad)
         {
@@ -37,6 +56,8 @@ namespace lib_repositorios.Implementaciones
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
             // Operaciones
+            if(!Validar(entidad))
+                throw new Exception("lbNoEsValido");
             this.IConexion!.Desarrolladores!.Add(entidad);
             this.IConexion.SaveChanges();
             return entidad;

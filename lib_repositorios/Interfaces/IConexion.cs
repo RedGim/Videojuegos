@@ -20,10 +20,6 @@ namespace lib_repositorios.Interfaces
         DbSet<CarritoCompras>? CarritoCompras { get; set; }
         DbSet<CarritoDetalles>? CarritoDetalles { get; set; }
         DbSet<Pagos>? Pagos { get; set; }
-        DbSet<Categorias>? Categorias { get; set; }
-        DbSet<Clasificaciones>? Clasificaciones { get; set; }
-        DbSet<Plataformas>? Plataformas { get; set; }
-        DbSet<Desarrolladores>? Desarrolladores { get; set; }
         DbSet<Usuarios>? Usuarios { get; set; }
         DbSet<Perfiles>? Perfiles { get; set; }
         DbSet<Videojuegos>? Videojuegos { get; set; }
