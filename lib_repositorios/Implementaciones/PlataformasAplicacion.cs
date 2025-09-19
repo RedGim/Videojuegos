@@ -1,4 +1,4 @@
-﻿using lib_dominio.Entidades;
+using lib_dominio.Entidades;
 using lib_repositorios.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,6 +16,20 @@ namespace lib_repositorios.Implementaciones
         public void Configurar(string StringConexion)
         {
             this.IConexion!.StringConexion = StringConexion;
+        }
+        public static bool Validar(Plataformas clasificacion)
+        {
+            if (string.IsNullOrWhiteSpace(clasificacion.Nombre))
+            {
+                throw new Exception("El nombre de la Plataforma es obligatorio.");
+            }
+
+            if (clasificacion.Nombre.Length > 30)
+            {
+                throw new Exception("El nombre de la Plataforma no puede superar los 30 caracteres.");
+            }
+
+            return true;
         }
 
         public Plataformas? Borrar(Plataformas? entidad)
@@ -37,6 +51,8 @@ namespace lib_repositorios.Implementaciones
             if (entidad.Id != 0)
                 throw new Exception("lbYaSeGuardo");
             // Operaciones
+            if (!Validar(entidad))
+                throw new Exception("lbNoEsValido");
             this.IConexion!.Plataformas!.Add(entidad);
             this.IConexion.SaveChanges();
             return entidad;
